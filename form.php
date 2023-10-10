@@ -10,7 +10,9 @@ $censoredword = $_POST["censoredword"];
 $words_length = strlen($words);
 
 //censurare la parola (inserita nel secondo input) presente all'interno del testo
-$badword = str_replace($censoredword, '*****' , $words);
+$badword = str_replace($censoredword, '***' , $words);
+
+//
 
 
 
@@ -30,5 +32,6 @@ $badword = str_replace($censoredword, '*****' , $words);
     <p>Il testo che hai digitato contiene <?php echo $words_length?> caratteri</p>
     <h2>La parola censurata è: <?php echo $censoredword?></h2>
     <h2>Questo è il risultato della censura della parola che hai inserito: <?php echo $badword?></h2>
+    <p>Nuova lunghezza del contenuto dell frase: <?php echo strlen($badword)?></p>
 </body>
 </html>
